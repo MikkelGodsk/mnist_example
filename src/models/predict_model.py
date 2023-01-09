@@ -8,6 +8,8 @@ import torchmetrics
 from dotenv import find_dotenv, load_dotenv
 from model import MyAwesomeModel
 
+from src.data.make_dataset import mnist
+
 
 @click.command()
 @click.argument("model_checkpoint")
@@ -19,7 +21,7 @@ def evaluate(model_checkpoint):
     checkpoint = torch.load(model_checkpoint)
     model = MyAwesomeModel(28*28)
     model.load_state_dict(checkpoint["model_state_dict"])
-
+    _, test_dataloader = mnist()
     
     predictions = []
     true = []
