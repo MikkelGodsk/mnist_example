@@ -1,4 +1,4 @@
-name: isort
+name: isort, mypy, flake8
 
 on:
   push:
