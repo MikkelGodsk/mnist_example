@@ -25,8 +25,7 @@ def train(cfg):
     # TODO: Implement training loop here
     model = MyAwesomeModel(cfg.model.hidden_neurons)
     train_dataloader, _ = mnist(
-        batch_size=cfg.training.batch_size, 
-        path=os.path.join('..','..','..','data')
+        batch_size=cfg.training.batch_size, path=os.path.join("..", "..", "..", "data")
     )
     optimizer = torch.optim.Adam(lr=cfg.training.lr, params=model.parameters())
     loss_fn = torch.nn.NLLLoss()
@@ -44,12 +43,12 @@ def train(cfg):
             loss.backward()
             optimizer.step()
             if i % cfg.training.log_interval == 0:
-                #example = wandb.Image(X[0])
+                # example = wandb.Image(X[0])
                 wandb.log(
                     {
-                        "loss": loss, 
-                        #"example": example, 
-                        "step": i
+                        "loss": loss,
+                        # "example": example,
+                        "step": i,
                     }
                 )
 
