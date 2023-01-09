@@ -8,11 +8,10 @@ from src.models.model import MyAwesomeModel
 
 def test_model_shape():
     model = MyAwesomeModel()
-    train, _ = mnist(batch_size=16)
 
-    X, y = next(iter(train))
+    X = torch.randn([16,28,28], dtype=torch.float64)
     y_hat = model(X)
-    assert y.shape[0] == y_hat.shape[0], "Model did not produce the correct output shape"
+    assert y_hat.shape == torch.Size([16,10]), "Model did not produce the correct output shape"
 
 
 @pytest.mark.parametrize(["shape"], [([16,1,28,28],), ([28,28],)])
