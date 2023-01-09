@@ -1,0 +1,50 @@
+{
+    "os": "Windows-10-10.0.19044-SP0",
+    "python": "3.10.8",
+    "heartbeatAt": "2023-01-09T15:39:55.726642",
+    "startedAt": "2023-01-09T15:39:54.382612",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "C:\\Users\\mikke\\OneDrive\\Dokumenter\\DTU documents\\9. semester (kandidat 1. semester)\\02476 - Machine Learning Operations\\Notes and exercises\\mnist\\src\\models\\train_model.py",
+    "codePath": "src\\models\\train_model.py",
+    "git": {
+        "remote": "https://github.com/MikkelGodsk/mnist_example.git",
+        "commit": "f14ab4279f53ae6837aead5da800f0108c2c4c8a"
+    },
+    "email": "s184399@student.dtu.dk",
+    "root": "C:/Users/mikke/OneDrive/Dokumenter/DTU documents/9. semester (kandidat 1. semester)/02476 - Machine Learning Operations/Notes and exercises/mnist",
+    "host": "DESKTOP-96RBBB5",
+    "username": "mikke",
+    "executable": "C:\\Users\\mikke\\anaconda3\\envs\\deeplearning\\python.exe",
+    "cpu_count": 2,
+    "cpu_count_logical": 4,
+    "cpu_freq": {
+        "current": 2901.0,
+        "min": 0.0,
+        "max": 2901.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2901.0,
+            "min": 0.0,
+            "max": 2901.0
+        }
+    ],
+    "disk": {
+        "total": 237.2256736755371,
+        "used": 224.34840393066406
+    },
+    "gpu": "NVIDIA GeForce 940MX",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce 940MX",
+            "memory_total": 2147483648
+        }
+    ],
+    "memory": {
+        "total": 7.905220031738281
+    }
+}

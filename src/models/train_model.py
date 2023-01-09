@@ -7,9 +7,9 @@ import hydra
 import torch
 import wandb
 from dotenv import find_dotenv, load_dotenv
-from model import MyAwesomeModel
 
-from data.make_dataset import mnist
+from src.data.make_dataset import mnist
+from src.models.model import MyAwesomeModel
 
 
 @click.command()
@@ -18,13 +18,16 @@ def train(cfg):
     wandb.init()
 
     print("Training day and night")
-
+    print(os.getcwd(), flush=True)
     if not os.path.isdir("checkpoints"):
         os.mkdir("checkpoints")
 
     # TODO: Implement training loop here
     model = MyAwesomeModel(cfg.model.hidden_neurons)
-    train_dataloader, _ = mnist(batch_size=cfg.training.batch_size)
+    train_dataloader, _ = mnist(
+        batch_size=cfg.training.batch_size, 
+        path=os.path.join('..','..','..','data')
+    )
     optimizer = torch.optim.Adam(lr=cfg.training.lr, params=model.parameters())
     loss_fn = torch.nn.NLLLoss()
 
@@ -41,8 +44,14 @@ def train(cfg):
             loss.backward()
             optimizer.step()
             if i % cfg.training.log_interval == 0:
-                example = wandb.Image(X[0])
-                wandb.log({"loss": loss, "example": example, "step": i})
+                #example = wandb.Image(X[0])
+                wandb.log(
+                    {
+                        "loss": loss, 
+                        #"example": example, 
+                        "step": i
+                    }
+                )
 
         torch.save(
             {

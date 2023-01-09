@@ -1,6 +1,0 @@
-model:
-  hidden_neurons: 784
-training:
-  lr: 0.001
-  epochs: 1
-  batch_size: 16

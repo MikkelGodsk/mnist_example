@@ -5,9 +5,9 @@ import click
 import torch
 import torchmetrics
 from dotenv import find_dotenv, load_dotenv
-from model import MyAwesomeModel
 
 from src.data.make_dataset import mnist
+from src.models.model import MyAwesomeModel
 
 
 @click.command()

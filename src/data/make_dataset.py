@@ -5,6 +5,7 @@ import torch
 
 
 def mnist(path="data", batch_size=16):
+    print("Looking for dataset in: " + os.path.abspath(os.path.join(path, "processed")))
     train_set = torch.utils.data.ConcatDataset(
         [
             torch.utils.data.TensorDataset(
