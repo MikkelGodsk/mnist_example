@@ -6,9 +6,9 @@ import click
 import hydra
 import numpy as np
 import torch
+import wandb
 from dotenv import find_dotenv, load_dotenv
 from model import MyAwesomeModel
-import wandb
 
 from data.make_dataset import mnist
 

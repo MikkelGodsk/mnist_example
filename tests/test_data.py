@@ -1,11 +1,11 @@
 import os
 
-import torch
 import numpy as np
 import pytest
+import torch
 
-from tests import _PATH_DATA
 from src.data.make_dataset import mnist
+from tests import _PATH_DATA
 
 
 @pytest.mark.skipif(not os.path.exists(_PATH_DATA), reason="Data files not found")

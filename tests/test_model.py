@@ -1,6 +1,6 @@
-import torch
 import numpy as np
 import pytest
+import torch
 
 from src.data.make_dataset import mnist
 from src.models.model import MyAwesomeModel
