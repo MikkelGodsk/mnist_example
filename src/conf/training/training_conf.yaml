@@ -1,0 +1,5 @@
+# @package _group_
+lr: 1e-3
+epochs: 1
+batch_size: 16
+log_interval: 100

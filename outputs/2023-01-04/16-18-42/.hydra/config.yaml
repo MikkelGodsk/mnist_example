@@ -1,0 +1,4 @@
+model:
+  hidden_neurons=784: null
+training:
+  lr=1e-3 epochs=1 batch_size=16: null
