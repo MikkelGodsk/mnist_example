@@ -2,7 +2,6 @@ import logging
 from pathlib import Path
 
 import click
-import numpy as np
 import torch
 import torchmetrics
 from dotenv import find_dotenv, load_dotenv

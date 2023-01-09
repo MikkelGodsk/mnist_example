@@ -4,7 +4,7 @@ import numpy as np
 import torch
 
 
-def mnist(path='data', batch_size=16):
+def mnist(path="data", batch_size=16):
     train_set = torch.utils.data.ConcatDataset(
         [
             torch.utils.data.TensorDataset(
@@ -12,7 +12,8 @@ def mnist(path='data', batch_size=16):
                 torch.tensor(train_raw["labels"], dtype=torch.int64),
             )
             for train_raw in [
-                np.load(os.path.join(path, "processed", "train_{:d}.npz".format(i))) for i in range(8)
+                np.load(os.path.join(path, "processed", "train_{:d}.npz".format(i)))
+                for i in range(8)
             ]
         ]
     )

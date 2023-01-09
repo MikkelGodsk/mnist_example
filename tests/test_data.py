@@ -2,7 +2,6 @@ import os
 
 import numpy as np
 import pytest
-import torch
 
 from src.data.make_dataset import mnist
 from tests import _PATH_DATA
@@ -26,8 +25,6 @@ def test_data_length():
 
 @pytest.mark.skipif(not os.path.exists(_PATH_DATA), reason="Data files not found")
 def test_data_shape():
-    N_train = 40000  # 25000
-    N_test = 5000
 
     train, test = mnist(path=_PATH_DATA, batch_size=16)
     X_train = next(iter(train))
@@ -38,8 +35,6 @@ def test_data_shape():
 
 @pytest.mark.skipif(not os.path.exists(_PATH_DATA), reason="Data files not found")
 def test_data_labels_count():
-    N_train = 40000  # 25000
-    N_test = 5000
 
     train, test = mnist(path=_PATH_DATA, batch_size=16)
     labels_count = np.zeros((10,))

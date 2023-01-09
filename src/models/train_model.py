@@ -4,7 +4,6 @@ from pathlib import Path
 
 import click
 import hydra
-import numpy as np
 import torch
 import wandb
 from dotenv import find_dotenv, load_dotenv
@@ -17,9 +16,6 @@ from data.make_dataset import mnist
 @hydra.main(config_path="../conf", config_name="config.yaml")
 def train(cfg):
     wandb.init()
-    os.chdir(
-        "C:\\Users\\mikke\\OneDrive\\Dokumenter\\DTU documents\\9. semester (kandidat 1. semester)\\02476 - Machine Learning Operations\\Notes and exercises\\mnist_project"
-    )
 
     print("Training day and night")
 
