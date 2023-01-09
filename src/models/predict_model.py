@@ -19,10 +19,10 @@ def evaluate(model_checkpoint):
 
     # TODO: Implement evaluation logic here
     checkpoint = torch.load(model_checkpoint)
-    model = MyAwesomeModel(28*28)
+    model = MyAwesomeModel(28 * 28)
     model.load_state_dict(checkpoint["model_state_dict"])
     _, test_dataloader = mnist()
-    
+
     predictions = []
     true = []
     for X, y in test_dataloader:

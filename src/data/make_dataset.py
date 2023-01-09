@@ -10,7 +10,7 @@ def mnist(batch_size=16):
                 torch.tensor(train_raw["labels"], dtype=torch.int64),
             )
             for train_raw in [
-                np.load("data\\processed\\train_{:d}.npz".format(i)) for i in range(5)
+                np.load("data\\processed\\train_{:d}.npz".format(i)) for i in range(8)
             ]
         ]
     )

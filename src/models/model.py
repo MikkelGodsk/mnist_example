@@ -11,6 +11,7 @@ class MyAwesomeModel(nn.Module):
         self.fc2 = nn.LazyLinear(10, dtype=torch.float64)
         self.relu = nn.ReLU()
         self.log_softmax = nn.LogSoftmax(dim=1)
+
     def forward(self, x):
         if x.ndim != 3:
             raise ValueError("Input should be in 3 dimensions")
