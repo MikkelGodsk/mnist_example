@@ -13,7 +13,7 @@ def test_data_length():
     N_train = 40000  # 25000
     N_test = 5000
 
-    train, test = mnist(batch_size=16)
+    train, test = mnist(path=_PATH_DATA, batch_size=16)
     len_train = 0
     for X, y in train:
         len_train += len(y)
@@ -29,7 +29,7 @@ def test_data_shape():
     N_train = 40000  # 25000
     N_test = 5000
 
-    train, test = mnist(batch_size=16)
+    train, test = mnist(path=_PATH_DATA, batch_size=16)
     X_train = next(iter(train))
     X_test = next(iter(test))
     assert X_train[0].shape == (16, 28, 28), "Training set sample had incorrect shape"
@@ -41,7 +41,7 @@ def test_data_labels_count():
     N_train = 40000  # 25000
     N_test = 5000
 
-    train, test = mnist(batch_size=16)
+    train, test = mnist(path=_PATH_DATA, batch_size=16)
     labels_count = np.zeros((10,))
     for X, y in train:
         for label in y:
