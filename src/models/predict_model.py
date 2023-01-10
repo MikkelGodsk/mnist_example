@@ -1,7 +1,7 @@
 import logging
 from pathlib import Path
 
-import click # type: ignore
+import click  # type: ignore
 import torch
 import torchmetrics
 from dotenv import find_dotenv, load_dotenv

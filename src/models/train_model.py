@@ -2,7 +2,7 @@ import logging
 import os
 from pathlib import Path
 
-import click # type: ignore
+import click  # type: ignore
 import hydra
 import torch
 import wandb
